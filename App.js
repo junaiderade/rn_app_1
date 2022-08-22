@@ -10,6 +10,10 @@ import Login from './Components/Login';
 import TweetByID from './Components/TweetByID';
 import TwitterWordCloud from './Components/TwitterWordCloud';
 import DynamoEx from './Components/DynamoEx';
+import Start from './Components/GoalsMVP/Start'
+import SignIn from './Components/GoalsMVP/SignIn'
+import Home from './Components/GoalsMVP/Home'
+
 
 function HomeScreen({navigation}) {
   return (
@@ -36,6 +40,10 @@ function HomeScreen({navigation}) {
     title="DynamoEX (built with express server 1)"
     onPress={() => navigation.navigate('DynamoEx')}
     />
+    <Button
+    title="Goals App MVP"
+    onPress={() => navigation.navigate('Start')}
+    />
     </View>
   );
 }
@@ -45,13 +53,18 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen}/>
+      <Stack.Navigator initialRouteName="Home1">
+        <Stack.Screen name="Home1" component={HomeScreen}/>
         <Stack.Screen name="Login" component={Login}/>
         <Stack.Screen name="DadJoke" component={DadJoke}/>
         <Stack.Screen name='TweetByID' component={TweetByID}/>
         <Stack.Screen name="TwitterWordCloud" component={TwitterWordCloud}/>
         <Stack.Screen name="DynamoEx" component={DynamoEx}/>
+
+        <Stack.Screen name="Start" component={Start}/>
+        <Stack.Screen name="SignIn" component={SignIn}/>
+        <Stack.Screen name="Home" component={Home}/>
+
       </Stack.Navigator>
     </NavigationContainer>
   );
