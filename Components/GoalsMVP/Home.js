@@ -7,7 +7,9 @@ const Home = ({navigation, route}) => {
     
     return (
         <View>
-            Logged in as {username}
+            <Text>
+                Logged in as {username}
+            </Text>
         </View>
     )
 }
