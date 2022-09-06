@@ -12,8 +12,9 @@ import TwitterWordCloud from './Components/TwitterWordCloud';
 import DynamoEx from './Components/DynamoEx';
 import Start from './Components/GoalsMVP/Start'
 import SignIn from './Components/GoalsMVP/SignIn'
+import SignUp from './Components/GoalsMVP/SignUp';
 import Home from './Components/GoalsMVP/Home'
-
+import SignedUp from './Components/GoalsMVP/SignedUp';
 
 function HomeScreen({navigation}) {
   return (
@@ -63,6 +64,9 @@ export default function App() {
 
         <Stack.Screen name="Start" component={Start}/>
         <Stack.Screen name="SignIn" component={SignIn}/>
+        <Stack.Screen name="SignUp" component={SignUp}/>
+        <Stack.Screen name="SignedUp" component={SignedUp}/>
+
         <Stack.Screen name="Home" component={Home}/>
 
       </Stack.Navigator>

@@ -1,17 +1,33 @@
 import React from "react";
-import { View, Text, Image, ScrollView, TextInput, Button } from 'react-native';
-
+import { View, Text, Image, ScrollView, TextInput, Button, Pressable } from 'react-native';
+import MyStyles from "../../MyStyles";
 
 const Start = ({navigation}) => {
     return (
-        <View>
-            <Button
-            title = "Sign In"
+        <View style = {MyStyles.center}>
+            <Pressable 
+            // button can't take a style prop
+            style = {MyStyles.pressable}
             onPress={() => navigation.navigate('SignIn')}
-            />
-            <Button
-            title = "Go back"
-            />
+            >
+                <Text
+                style = {MyStyles.pressable_text}
+                >
+                    Sign In
+                </Text>
+            </Pressable>
+
+            <Pressable 
+            // button can't take a style prop
+            style = {MyStyles.pressable}
+            onPress={() => navigation.navigate('SignUp')}
+            >
+                <Text
+                style = {MyStyles.pressable_text}
+                >
+                    Sign Up
+                </Text>
+            </Pressable>
         </View>
     )
 }

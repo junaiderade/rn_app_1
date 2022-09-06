@@ -24,5 +24,21 @@ export default StyleSheet.create({
         width: '60%',
         borderWidth: 1,
         padding: 10
+      },
+      pressable: {
+        width: '30vw',
+        padding: 10,
+        border: '1px solid #2E8B57',
+        borderRadius: 25,
+        margin: 10,
+      },
+      pressable_text: {
+        color: '#2E8B57',
+        fontSize: 20,
+        textAlign: 'center'
+      }, 
+      mvp_text: {
+        color: '#2E8B57',
+        fontSize: 20
       }
 });
